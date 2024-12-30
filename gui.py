@@ -150,6 +150,8 @@ class CryptographyApp(ctk.CTk):
                             elif cipher == "Gronsfeld":
                                 result = GronsfeldCipher.encrypt_ascii(
                                     input_text, key)
+                            elif cipher == "Sha_1":
+                                result = Sha_1.sha_1(key.encode('utf-8'))  
                             else:
                                 raise ValueError("Unsupported cipher!")
                         else:
@@ -174,6 +176,8 @@ class CryptographyApp(ctk.CTk):
                             elif cipher == "Gronsfeld":
                                 result = GronsfeldCipher.encrypt_unicode(
                                     input_text, key)
+                            elif cipher == "Sha_1":
+                                result = Sha_1.sha_1(key.encode('utf-8'))  
                             else:
                                 raise ValueError("Unsupported cipher!")
                         # Добавляем успешный результат
